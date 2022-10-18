@@ -17,6 +17,109 @@ body {
   background-color: navajowhite;
 }
 
+#gallery {
+  background-color: navajowhite;
+}
+
 section {
   padding-top: 5rem;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
+}
+
+/* My Everest Section */
+.fruits-box {
+  position: relative;
+  background-color: sandybrown;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.fruits-box::before {
+  content: "MY";
+  position: absolute;
+  color: darkmagenta;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fruits-box:hover::before {
+  opacity: 0.2;
+}
+
+.fruits-box::after {
+  content: "FRUITS";
+  position: absolute;
+  color: darkmagenta;
+  font-size: 4.3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fruits-box:hover::after {
+  opacity: 0.2;
+}
+
+.fruits-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.fruits-box:hover .fruits-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.fruits-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fruits-box:hover .fruits-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.fruits-img {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 80px);
+  max-width: 350px;
+  transition: 00.5s;
+  z-index: 10;
+  /* background-color: #b7b0fd; */
+}
+
+.fruits-box:hover .fruits-img {
+  transform: translate3d(-50%, -52%, 100pxs) rotate(5deg) scale(1.2);
 }
